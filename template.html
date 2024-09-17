@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAR Player Analysis - Player 134300</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+        #plotly-div {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>BAR Player Analysis - Player 134300</h1>
+    <div id="plotly-div"></div>
+
+    <script>
+        // Plotly data will be inserted here
+        var plotlyData = {{ plotly_json | safe }};
+        Plotly.newPlot('plotly-div', plotlyData.data, plotlyData.layout);
+    </script>
+</body>
+</html>
